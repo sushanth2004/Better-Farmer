@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Audio Recording Example</title>
+  </head>
+  <body>
+    <h1>Audio Recording Example</h1>
+    <div>
+      <button id="record-button">Record</button>
+      <button id="stop-button">Stop</button>
+    </div>
+    <div>
+      <audio id="audio-preview" controls></audio>
+    </div>
+    <script>
+      // Select DOM elements
+      const recordButton = document.getElementById("record-button");
+      const stopButton = document.getElementById("stop-button");
+      const audioPreview = document.getElementById("audio-preview");
+
+      // Create a new instance of MediaRecorder
+      let mediaRecorder = null;
+      let chunks = [];
+
+      // When the record button is clicked, start recording
+      recordButton.addEventListener("click", () => {
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then((stream) => {
+            mediaRecorder = new MediaRecorder(stream);
+            mediaRecorder.start();
+            chunks = [];
+            recordButton.disabled = true;
+            stopButton.disabled = false;
+          })
+          .catch((error) => {
+            console.error("Unable to access the microphone", error);
+          });
+      });
+
+      // When the stop button is clicked, stop recording and preview the recorded audio
+      stopButton.addEventListener("click", () => {
+        mediaRecorder.stop();
+        mediaRecorder.ondataavailable = (event) => {
+          chunks.push(event.data);
+        };
+        mediaRecorder.onstop = () => {
+          const blob = new Blob(chunks, { type: "audio/ogg; codecs=opus" });
+          const url = URL.createObjectURL(blob);
+          audioPreview.src = url;
+          audioPreview.controls = true;
+          recordButton.disabled = false;
+          stopButton.disabled = true;
+        };
+      });
+    </script>
+  </body>
+</html>

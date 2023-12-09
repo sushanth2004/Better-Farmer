@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h1>ASK FARMER</h1>
+      </div>
+      <div class="chat-messages chat-container"></div>
+      <div class="chat-input">
+        <form>
+          <input type="text" placeholder="Enter your message" />
+          <button type="submit">Send</button>
+        </form>
+        <div class="audio">
+          <button class="audio-button" type="button">Record Audio</button>
+          <div class="audio-recorder"></div>
+          <progress class="audio-progress hidden" value="0" max="10"></progress>
+        </div>
+        <div class="image">
+          <input type="file" accept="image/*" id="image-input" />
+          <label for="image-input">Upload Image</label>
+        </div>
+      </div>
+    </div>
+    <script src="chat.js"></script>
+  </body>
+</html>

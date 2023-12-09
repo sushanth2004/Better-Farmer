@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color:  #82CD47;
+}
+
+.chat-container{
+  background-color: #E5FDD1;
+}
+
+.chat-window {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.chat-messages {
+  height: 400px;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: #f7f7f7;
+}
+
+.chat-message {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.chat-message p {
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  max-width: 250px;
+  word-wrap: break-word;
+}
+
+.chat-message-image {
+  display: block;
+  margin: 10px 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message-audio {
+  display: block;
+  margin: 10px 0;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message-audio audio {
+  width: 100%;
+  outline: none;
+}
+
+.chat-message-audio .audio-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background-color: #4caf50;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: #f7f7f7;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input[type="text"] {
+  flex-grow: 1;
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: none;
+  background-color: #eee;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.audio-button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.audio-progress {
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ccc;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}

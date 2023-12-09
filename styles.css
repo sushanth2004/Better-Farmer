@@ -1,0 +1,119 @@
+#title_section{
+
+  background-color: #82CD47;
+  padding: 30px;
+
+}
+
+
+.nav-item{
+  font-size: 20px;
+
+}
+
+
+
+.title-img{
+  border-radius: 15px;
+}
+
+
+.services_title{
+  padding: 30px;
+}
+
+#services_section{
+  background-color: #E5FDD1;
+}
+
+.askfarmer{
+  padding: auto;
+}
+
+.navbar-brand{
+  font-family: 'Ubuntu';
+  font-size:2.5rem;
+  font-weight: bold;
+}
+
+.nav-item{
+  padding: 0 18px;
+  font-size: 1.2rem;
+  font-family: "Montserrat-light";
+}
+
+.lastrow{
+  padding-bottom: 20px;
+}
+
+img{
+  height: 250px;
+  width:250px;
+}
+
+.big-heading{
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.askfarmer{
+  padding: 20px;
+  padding-top: 130px;
+}
+
+#features_section{
+  background-color:#82CD47;
+}
+
+.white-secton{
+  background-color: #E5FDD1;
+  padding: 20px;
+}
+
+.title-img{
+  height: 500px;
+  width:500px;
+}
+
+.card{
+  background-color: #A8E890;
+}
+
+
+
+body{
+  text-align: center;
+}
+
+#testimonials{
+  padding: 7% 15%;
+  background-color: #ef8172;
+}
+
+.testimonial-text{
+  font-weight: 900;
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonials-image{
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.carousel-item{
+    padding: 7% 15%;
+}
+
+#press{
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo{
+  width:10%;
+  margin: 20px 20px 50px;
+}

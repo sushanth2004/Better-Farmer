@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Farmer-Agricultural Officer Communication Platform</title>
+    <link rel="stylesheet" type="expert.css" href="style.css">
+  </head>
+  <body class="body-section">
+    <header>
+      <h1>Ask Expert</h1>
+    </header>
+    <main>
+      <div id="messages">
+        <!-- Messages will be dynamically added here using JavaScript -->
+      </div>
+      <form id="message-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="message" placeholder="enter mail" required>
+        <input type="file" id="image" accept="image/*">
+        <button type="button" id="record-button">Record Audio</button>
+        <audio id="audio-player" controls></audio>
+        <button type="submit">Send</button>
+      </form>
+    </main>
+    <script src="expert.js"></script>
+  </body>
+</html>
